@@ -1,5 +1,6 @@
 import './Sidebar.css'
 import logo from '../../assets/Kavak.svg'
+import { useNavigate } from 'react-router-dom';
 
 interface SidebarProps{
     sidebarOpen: boolean;
@@ -7,6 +8,12 @@ interface SidebarProps{
 }
 
 export const Sidebar = ({closeSidebar, sidebarOpen}: SidebarProps) => {
+
+    const navigate = useNavigate();
+    const handleLogOut = () => {   
+        navigate('/auth')
+    }
+
   return (
     <div className={sidebarOpen ? "sidebar-responsive": "" } id="sidebar">
         <div className="sidebar__title">
@@ -60,7 +67,7 @@ export const Sidebar = ({closeSidebar, sidebarOpen}: SidebarProps) => {
 
             <div className="sidebar__logout">
                 <i className="fa fa-power-off"></i>
-                <a href="#">Log out</a>
+                <a href="" onClick={handleLogOut}>Log out</a>
             </div>
         </div>
     </div>
