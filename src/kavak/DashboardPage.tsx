@@ -66,7 +66,7 @@ export const DashboardPage = () => {
          <div className="dash_container">
 
             <div className="my-card">
-                <h2 className="card-title">Datos Analizados</h2>
+                <h2 className="card-title">Registros de autos</h2>
                 <div className="card-chart">
 
                     <Chart />
