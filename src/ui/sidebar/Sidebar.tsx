@@ -19,7 +19,7 @@ export const Sidebar = ({closeSidebar, sidebarOpen}: SidebarProps) => {
         <div className="sidebar__title">
             <div className="sidebar__img">
                 <img src={logo} alt="logo" />
-                <h1>SforceCode</h1>
+                <h1>SmartForce</h1>
             </div>
             <i className="fa fa-times" id="sidebarIcon" onClick={() => closeSidebar()}></i>
         </div>

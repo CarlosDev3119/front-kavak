@@ -15,6 +15,10 @@ export const router = createBrowserRouter([
                 path: 'dashboard',
                 element: <App />
             },
+            // {
+            //     path: 'dashboard',
+            //     element: <App />
+            // },
             //AuthRoutes
             {
                 path: 'auth',
