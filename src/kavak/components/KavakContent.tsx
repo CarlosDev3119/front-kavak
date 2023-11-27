@@ -9,7 +9,7 @@ export const KavakContent = (props: MyData) => {
             <div className="main__form">
                 <div className="card_form">
                 <div className="card_header_form">
-                    <i className="fa fa-check-circle fa-2x text-lightblue"></i>
+                    <i className="bi bi-check-circle fa-2x text-lightblue"></i>
                     <h2 className="card_title_form"> Talon de verificación</h2>
                 </div>
                 <div className="card_inner_form">
@@ -39,7 +39,8 @@ export const KavakContent = (props: MyData) => {
 
                 <div className="card_form">
                 <div className="card_header_form">
-                    <i className="fa fa-user-o fa-2x text-lightblue"></i>
+                    <i className="bi bi-sticky fa-2x text-lightblue"></i>
+         
                     <h2 className="card_title_form"> Calcomanía de verificación</h2>
                 </div>
                 <div className="card_inner_form card_list">
@@ -59,7 +60,7 @@ export const KavakContent = (props: MyData) => {
 
                 <div className="card_form">
                 <div className="card_header_form">
-                    <i className="fa fa-user-o fa-2x text-lightblue"></i>
+                    <i className="bi bi-card-list fa-2x text-lightblue"></i>
                     <h2 className="card_title_form"> Placa Auto </h2>
                 </div>
 
@@ -72,7 +73,7 @@ export const KavakContent = (props: MyData) => {
 
                 <div className="card_form">
                 <div className="card_header_form">
-                    <i className="fa fa-user-o fa-2x text-lightblue"></i>
+                    <i className="bi bi-card-list fa-2x text-lightblue"></i>
                     <h2 className="card_title_form"> Placa Engomado </h2>
                 </div>
 
@@ -85,7 +86,7 @@ export const KavakContent = (props: MyData) => {
 
                 <div className="card_form">
                 <div className="card_header_form">
-                    <i className="fa fa-user-o fa-2x text-lightblue"></i>
+                    <i className="bi bi-check-circle fa-2x text-lightblue"></i>
                     <h2 className="card_title_form">Similitud en 5 documentos: <span>{props.campo16}</span> </h2>
                 </div>
 
@@ -110,7 +111,7 @@ export const KavakContent = (props: MyData) => {
 
                 <div className="card_form">
                 <div className="card_header_form">
-                    <i className="fa fa-user-o fa-2x text-lightblue"></i>
+                    <i className="bi bi-card-checklist fa-2x text-lightblue"></i>
                     <h2 className="card_title_form"> Vin parabrisas </h2>
                 </div>
 
@@ -123,7 +124,7 @@ export const KavakContent = (props: MyData) => {
 
                 <div className="card_form">
                 <div className="card_header_form">
-                    <i className="fa fa-user-o fa-2x text-lightblue"></i>
+                    <i className="bi bi-card-checklist fa-2x text-lightblue"></i>
                     <h2 className="card_title_form"> Vin carrocería </h2>
                 </div>
 
@@ -136,7 +137,7 @@ export const KavakContent = (props: MyData) => {
 
                 <div className="card_form">
                 <div className="card_header_form">
-                    <i className="fa fa-user-o fa-2x text-lightblue"></i>
+                    <i className="bi bi-card-checklist fa-2x text-lightblue"></i>
                     <h2 className="card_title_form"> Vin motor </h2>
                 </div>
 
@@ -149,7 +150,7 @@ export const KavakContent = (props: MyData) => {
 
                 <div className="card_form">
                 <div className="card_header_form">
-                    <i className="fa fa-user-o fa-2x text-lightblue"></i>
+                    <i className="bi bi-card-checklist fa-2x text-lightblue"></i>
                     <h2 className="card_title_form"> Vin escanner </h2>
                 </div>
 
@@ -162,7 +163,7 @@ export const KavakContent = (props: MyData) => {
 
                 <div className="card_form">
                 <div className="card_header_form">
-                    <i className="fa fa-user-o fa-2x text-lightblue"></i>
+                    <i className="bi bi-check-circle fa-2x text-lightblue"></i>
                     <h2 className="card_title_form"> Coincidencia entre los 4 documentos Vin: <span>{props.campo22}</span> </h2>
                 </div>
                 </div>
@@ -170,7 +171,7 @@ export const KavakContent = (props: MyData) => {
                             
                 <div className="card_form">
                 <div className="card_header_form">
-                    <i className="fa fa-user-o fa-2x text-lightblue"></i>
+                    <i className="bi bi-speedometer fa-2x text-lightblue"></i>
                     <h2 className="card_title_form"> KM Tacometro </h2>
                 </div>
 
@@ -183,7 +184,7 @@ export const KavakContent = (props: MyData) => {
 
                 <div className="card_form">
                 <div className="card_header_form">
-                    <i className="fa fa-user-o fa-2x text-lightblue"></i>
+                    <i className="bi bi-speedometer fa-2x text-lightblue"></i>
                     <h2 className="card_title_form"> KM Escanner </h2>
                 </div>
 
@@ -196,7 +197,7 @@ export const KavakContent = (props: MyData) => {
 
                 <div className="card_form">
                 <div className="card_header_form">
-                    <i className="fa fa-user-o fa-2x text-lightblue"></i>
+                    <i className="bi bi-check-circle fa-2x text-lightblue"></i>
                     <h2 className="card_title_form"> Coincidencia entre los 2 documentos: <span>{props.campo25}</span> </h2>
                 </div>
 
@@ -212,7 +213,7 @@ export const KavakContent = (props: MyData) => {
                     <div className="card_repuve">
                     <div className="card_form">
                         <div className="card_header_form">
-                        <i className="fa fa-user-o fa-2x text-lightblue"></i>
+                        <i className="bi bi-check-circle fa-2x text-lightblue"></i>
                         <h2 className="card_title_form"> Validación portal repuve: <span>{props.campo26}</span> </h2>
                         </div>
                     </div>
@@ -221,7 +222,7 @@ export const KavakContent = (props: MyData) => {
                 <div className="card_repuve">
                     <div className="card_form">
                     <div className="card_header_form">
-                        <i className="fa fa-user-o fa-2x text-lightblue"></i>
+                        <i className="bi bi-person-lines-fill fa-2x text-lightblue"></i>
                         <h2 className="card_title_form"> Repuve </h2>
                     </div>
 
@@ -242,7 +243,7 @@ export const KavakContent = (props: MyData) => {
                 <div className="card_repuve">
                     <div className="card_form">
                     <div className="card_header_form">
-                        <i className="fa fa-user-o fa-2x text-lightblue"></i>
+                        <i className="bi bi-person-lines-fill fa-2x text-lightblue"></i>
                         <h2 className="card_title_form"> Documentos </h2>
                     </div>
 
@@ -289,7 +290,7 @@ export const KavakContent = (props: MyData) => {
             <div className="card_repuve">
             <div className="card_form">
                 <div className="card_header_form">
-                <i className="fa fa-user-o fa-2x text-lightblue"></i>
+                <i className="bi bi-check-circle fa-2x text-lightblue"></i>
                 <h2 className="card_title_form"> Validación portal RAPI: <span>{props.campo41}</span> </h2>
                 </div>
             </div>
@@ -298,13 +299,14 @@ export const KavakContent = (props: MyData) => {
             <div className="card_repuve">
             <div className="card_form">
                 <div className="card_header_form">
-                <i className="fa fa-user-o fa-2x text-lightblue"></i>
+                <i className="bi bi-person-lines-fill fa-2x text-lightblue"></i>
                 <h2 className="card_title_form"> RAPI </h2>
                 </div>
 
                 <div className="card_inner_form">
                 <ul className="font-bold text-title">
                     <li>VIN: <span>{props.campo42}</span></li>
+                    <li>MOTOR: <span>{}</span></li>
                 </ul>
                 </div>
             </div>
@@ -314,7 +316,7 @@ export const KavakContent = (props: MyData) => {
             <div className="card_repuve">
             <div className="card_form">
                 <div className="card_header_form">
-                <i className="fa fa-user-o fa-2x text-lightblue"></i>
+                <i className="bi bi-person-lines-fill fa-2x text-lightblue"></i>
                 <h2 className="card_title_form"> Documentos </h2>
                 </div>
 
@@ -336,7 +338,7 @@ export const KavakContent = (props: MyData) => {
             <div className="card_repuve">
             <div className="card_form">
                 <div className="card_header_form">
-                <i className="fa fa-user-o fa-2x text-lightblue"></i>
+                <i className="bi bi-check-circle fa-2x text-lightblue"></i>
                 <h2 className="card_title_form"> Validación portal AMI Reporte de robo: <span>{props.campo44}</span></h2>
                 </div>
             </div>
@@ -354,7 +356,7 @@ export const KavakContent = (props: MyData) => {
             <div className="card_repuve">
             <div className="card_form">
                 <div className="card_header_form">
-                <i className="fa fa-user-o fa-2x text-lightblue"></i>
+                <i className="bi bi-check-circle fa-2x text-lightblue"></i>
                 <h2 className="card_title_form"> Validación portal AMI Seguros: <span>{props.campo45}</span> </h2>
                 </div>
             </div>
@@ -363,7 +365,7 @@ export const KavakContent = (props: MyData) => {
             <div className="card_repuve">
             <div className="card_form">
                 <div className="card_header_form">
-                <i className="fa fa-user-o fa-2x text-lightblue"></i>
+                <i className="bi bi-bookmark-check fa-2x text-lightblue"></i>
                 <h2 className="card_title_form"> AMI </h2>
                 </div>
 
@@ -381,7 +383,7 @@ export const KavakContent = (props: MyData) => {
             <div className="card_repuve">
             <div className="card_form">
                 <div className="card_header_form">
-                <i className="fa fa-user-o fa-2x text-lightblue"></i>
+                <i className="bi bi-bookmark-check fa-2x text-lightblue"></i>
                 <h2 className="card_title_form"> Adeudos: <span>{props.campo49}</span> </h2>
                 </div>
 
@@ -394,6 +396,62 @@ export const KavakContent = (props: MyData) => {
                 </div>
             </div>
             </div>
+        
+
+        
+        </div>
+
+        <div className="container_repuve">
+            
+
+            <div className="card_repuve">
+            <div className="card_form">
+                <div className="card_header_form">
+                <i className="bi bi-check-circle fa-2x text-lightblue"></i>
+                <h2 className="card_title_form"> : <span>{}</span> </h2>
+                </div>
+            </div>
+            </div>
+
+        <div className="card_repuve">
+            <div className="card_form">
+            <div className="card_header_form">
+                <i className="bi bi-person-lines-fill fa-2x text-lightblue"></i>
+                <h2 className="card_title_form"> Pesta;a 1 </h2>
+            </div>
+
+            <div className="card_inner_form">
+                <ul className="font-bold text-title">
+                <li>: <span>{}</span></li>
+                <li>: <span>{}</span></li>
+                <li>: <span>{}</span></li>
+                <li>: <span>{}</span></li>
+
+                </ul>
+            </div>
+            </div>
+        </div>
+
+        
+        <div className="card_repuve">
+            <div className="card_form">
+            <div className="card_header_form">
+                <i className="bi bi-person-lines-fill fa-2x text-lightblue"></i>
+                <h2 className="card_title_form"> Pesta;a 2 </h2>
+            </div>
+
+            <div className="card_inner_form">
+                <ul className="font-bold text-title">
+                <li>: <span>{}</span></li>
+                <li>: <span>{}</span></li>
+                <li>: <span>{}</span></li>
+                <li>: <span>{}</span></li>
+              
+
+                </ul>
+            </div>
+            </div>
+        </div>
         
 
         

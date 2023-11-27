@@ -113,7 +113,7 @@ export const KavakPage = () => {
 
   
     useEffect(() => {
-      const delay = 15000; // 15 segundos
+      const delay = 25000; // 15 segundos
 
       if (isSaved) {
         const timer = setTimeout(() => {
@@ -135,7 +135,7 @@ export const KavakPage = () => {
         <div className="main__title">
             <img src={logo} alt="kavak" />
             <div className="main__greeting">
-              <h1>SforceCode</h1>
+              <h1>Smartforce</h1>
               <p>Welcome to your admin dashboard</p>
             </div>
           </div>

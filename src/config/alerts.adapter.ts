@@ -9,6 +9,13 @@ export const alerts = {
             icon: "question"
           });
     },
+    alertSuccess: (text: string) => {
+        return Swal.fire({
+            title: "Bienvenido",
+            text: text,
+            icon: "success"
+          })
+    }
 
    
 }
