@@ -1,6 +1,6 @@
 import './Sidebar.css'
 import logo from '../../assets/Kavak.svg'
-import { useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 interface SidebarProps{
     sidebarOpen: boolean;
@@ -8,10 +8,12 @@ interface SidebarProps{
 }
 
 export const Sidebar = ({closeSidebar, sidebarOpen}: SidebarProps) => {
+    
+    const {pathname} = useLocation()
 
     const navigate = useNavigate();
     const handleLogOut = () => {   
-        navigate('/auth')
+        navigate('/auth/login')
     }
 
   return (
@@ -26,18 +28,20 @@ export const Sidebar = ({closeSidebar, sidebarOpen}: SidebarProps) => {
 
 
         <div className="sidebar__menu">
-            <div className="sidebar__link active_menu_link">
+            <div className={`sidebar__link ${(pathname === '/dashboard')? 'active_menu_link': ''} `}>
 
                 <i className="fa fa-home"></i>
-                <a href="#">Dashboard</a>
+                <Link to="/">Dashboard</Link>
 
             </div>
 
             <h2>MANAGEMENT</h2>
 
-            <div className="sidebar__link">
+            <div className={`sidebar__link ${(pathname === '/documents')? 'active_menu_link': ''} `}>
                 <i className="fa fa-user-secret"></i>
-                <a href="#">Admin Management</a>
+                {/* <a href="#">Admin Management</a> */}
+                <Link to="/documents">Admin Documents</Link>
+
             </div>
 
             <div className="sidebar__link">

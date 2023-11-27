@@ -86,7 +86,7 @@ export const KavakPage = () => {
   const [dataCampos, setDataCampos] = useState<MyData>(initialState);
 
   const handleFiles = async (event: ChangeEvent<HTMLInputElement>) => {
-
+    event.preventDefault()
     const files = event.target.files || [];
     const formData = new FormData();
 
@@ -136,7 +136,7 @@ export const KavakPage = () => {
             <img src={logo} alt="kavak" />
             <div className="main__greeting">
               <h1>Smartforce</h1>
-              <p>Welcome to your admin dashboard</p>
+              <p>Bienvenido al apartadod para cargar documentos de los vehiculos</p>
             </div>
           </div>
 

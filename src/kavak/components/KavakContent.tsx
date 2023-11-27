@@ -1,5 +1,7 @@
 import { MyData } from "../interfaces/interfaces"
 
+import pdf from '../../assets/pdfkavak.pdf';
+
 export const KavakContent = (props: MyData) => {
   return (
     <>
@@ -214,7 +216,8 @@ export const KavakContent = (props: MyData) => {
                     <div className="card_form">
                         <div className="card_header_form">
                         <i className="bi bi-check-circle fa-2x text-lightblue"></i>
-                        <h2 className="card_title_form"> Validación portal repuve: <span>{props.campo26}</span> </h2>
+                        <h2 className="card_title_form"><a href={pdf} target="_blank">Validación portal repuve: <span>{props.campo26}</span></a>  </h2>
+                        
                         </div>
                     </div>
                     </div>
@@ -271,10 +274,10 @@ export const KavakContent = (props: MyData) => {
 
                 <div className="card_inner_form">
                 <ul className="font-bold text-title">
-                    <li>Validación portal FGJ: <span>{props.campo37}</span></li>
-                    <li>Validación portal OCRA : <span>{props.campo38}</span></li>
-                    <li>Validación portal Robo USA/CAN : <span>{props.campo39}</span></li>
-                    <li>Validación Avisos judiciales: <span>{props.campo40}</span></li>
+                    <li> <a href={pdf} target="_blank">Validación portal FGJ: <span>{props.campo37}</span></a> </li>
+                    <li> <a href={pdf} target="_blank">Validación portal OCRA: <span>{props.campo38}</span></a> </li>
+                    <li> <a href={pdf} target="_blank">Validación portal Robo USA/CAN: <span>{props.campo39}</span></a> </li>
+                    <li> <a href={pdf} target="_blank">Validación Avisos judiciales: <span>{props.campo40}</span></a> </li>
 
                 </ul>
                 </div>

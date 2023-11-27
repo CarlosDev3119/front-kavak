@@ -15,10 +15,10 @@ export const Auth = () => {
     const navigate = useNavigate();
     const handleLogin = () => {
         alerts.alertSuccess('Ingresando al sistema')
-        .then((result) => {
+        .then((result: any) => {
             if (result.isConfirmed) {
         
-              navigate('/dashboard')
+              navigate('/documents')
             }
           });
         
