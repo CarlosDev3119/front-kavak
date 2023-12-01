@@ -16,27 +16,29 @@ export const KavakContent = (props: MyData) => {
                 </div>
                 <div className="card_inner_form">
                     <ul className="font-bold text-title">
-                    <li>Placa: <span>{props.campo1}</span></li>
-                    <li>Mes: <span>{props.campo2}</span></li>
-                    <li>Estado: <span>{props.campo3}</span></li>
+                    <li>Placa: <span>{(props.tvplaca) ? props.tvplaca: 'Sin datos'}</span></li>
+                    <li>Mes: <span>{(props.tvmes) ? props.tvmes: 'Sin datos'}</span></li>
+                    <li>Estado: <span>{(props.tvestado) ? props.tvestado: 'Sin datos'}</span></li>
                     </ul>
                 </div>
                 </div>
 
                 
                 <div className="card_form">
-                <div className="card_header_form">
-                    <i className="fa fa-solid fa-id-card fa-2x text-lightblue"></i>
-                    <h2 className="card_title_form"> Tarjeta de Circulación</h2>
-                </div>
-                <div className="card_inner_form">
-                    <ul className="font-bold text-title">
-                    <li>Placa: <span>{props.campo4}</span></li>
-                    <li>Vin: <span>{props.campo5}</span></li>
-                    <li>Modelo: <span>{props.campo6}</span></li>
-                    <li>Estado: <span>{props.campo7}</span></li>
-                    </ul>
-                </div>
+                    <div className="card_header_form">
+                        <i className="fa fa-solid fa-id-card fa-2x text-lightblue"></i>
+                        <h2 className="card_title_form"> Tarjeta de Circulación</h2>
+                    </div>
+                    <div className="card_inner_form">
+                        <ul className="font-bold text-title">
+                        <li>Placa: <span>{(props.tcplaca) ? props.tcplaca: 'Sin datos'}</span></li>
+                        <li>Vin: <span>{(props.tcvin) ? props.tcvin: 'Sin datos'}</span></li>
+                        <li>Modelo: <span>{(props.tcmodelo) ? props.tcmodelo: 'Sin datos'}</span></li>
+                        <li>Estado: <span>{(props.tcestado) ? props.tcestado: 'Sin datos'}</span></li>
+                        <li>Fecha Vigencia: <span>{(props.tcfechavigencia) ? props.tcfechavigencia: 'Sin datos'}</span></li>
+                        <li>Edo de Vigencia: <span>{(props.tcedovigente) ? props.tcedovigente: 'Sin datos'}</span></li>
+                        </ul>
+                    </div>
                 </div>
 
                 <div className="card_form">
@@ -47,14 +49,14 @@ export const KavakContent = (props: MyData) => {
                 </div>
                 <div className="card_inner_form card_list">
                     <ul className="font-bold text-title ">
-                    <li>Tipo: <span>{props.campo8}</span></li>
-                    <li>Placa: <span>{props.campo9}</span></li>
-                    <li>Modelo: <span>{props.campo10}</span></li>
+                    <li>Tipo: <span>{(props.cftipo) ? props.cftipo: 'Sin datos'}</span></li>
+                    <li>Placa: <span>{(props.cfplaca) ? props.cfplaca: 'Sin datos'}</span></li>
+                    <li>Modelo: <span>{(props.cdmodelo) ? props.cdmodelo: 'Sin datos'}</span></li>
                     </ul>
                     <ul className="font-bold text-title">
-                    <li>Año: <span>{props.campo11}</span></li>
-                    <li>Validez: <span>{props.campo12}</span></li>
-                    <li>Código: <span>{props.campo13}</span></li>
+                    <li>Año: <span>{(props.cfanio) ? props.cfanio: 'Sin datos'}</span></li>
+                    <li>Validez: <span>{(props.cfvalidez) ? props.cfvalidez: 'Sin datos'}</span></li>
+                    <li>Código: <span>{(props.cfcodigo) ? props.cfcodigo: 'Sin datos'}</span></li>
                     </ul>
                 </div>
                 </div>
@@ -68,7 +70,7 @@ export const KavakContent = (props: MyData) => {
 
                 <div className="card_inner_form">
                     <ul className="font-bold text-title">
-                    <li>Clave: <span>{props.campo14}</span></li>
+                    <li>Clave: <span>{(props.paclave) ? props.paclave: 'Sin datos'}</span></li>
                     </ul>
                 </div>
                 </div>
@@ -81,7 +83,7 @@ export const KavakContent = (props: MyData) => {
 
                 <div className="card_inner_form">
                     <ul className="font-bold text-title">
-                    <li>Clave: <span>{props.campo15}</span></li>
+                    <li>Clave: <span>{(props.peclave) ? props.peclave: 'Sin datos'}</span></li>
                     </ul>
                 </div>
                 </div>
@@ -89,13 +91,13 @@ export const KavakContent = (props: MyData) => {
                 <div className="card_form">
                 <div className="card_header_form">
                     <i className="bi bi-check-circle fa-2x text-lightblue"></i>
-                    <h2 className="card_title_form">Similitud en 5 documentos: <span>{props.campo16}</span> </h2>
+                    <h2 className="card_title_form">Similitud en 5 documentos: <span>{(props.c5docs) ? props.c5docs: 'Sin datos'}</span> </h2>
                 </div>
 
                 <div className="card_inner_form ">
                     <ul className="font-bold text-title">
                     <li>Repuve</li>
-                    <li>Clave: <span>{props.campo17}</span></li>
+                    <li>Clave: <span>{(props.reclave) ? props.reclave: 'Sin datos'}</span></li>
                     </ul>
                 </div>
 
@@ -119,7 +121,7 @@ export const KavakContent = (props: MyData) => {
 
                 <div className="card_inner_form">
                     <ul className="font-bold text-title">
-                    <li>Clave: <span>{props.campo18}</span></li>
+                    <li>Clave: <span>{(props.vinparabclave) ? props.vinparabclave: 'Sin datos'}</span></li>
                     </ul>
                 </div>
                 </div>
@@ -132,7 +134,7 @@ export const KavakContent = (props: MyData) => {
 
                 <div className="card_inner_form">
                     <ul className="font-bold text-title">
-                    <li>Clave: <span>{props.campo19}</span></li>
+                    <li>Clave: <span>{(props.vincarclave) ? props.vincarclave: 'Sin datos'}</span></li>
                     </ul>
                 </div>
                 </div>
@@ -145,7 +147,7 @@ export const KavakContent = (props: MyData) => {
 
                 <div className="card_inner_form">
                     <ul className="font-bold text-title">
-                    <li>Clave: <span>{props.campo20}</span></li>
+                    <li>Clave: <span>{(props.vinmotorclave) ? props.cftipo: 'Sin datos'}</span></li>
                     </ul>
                 </div>
                 </div>
@@ -158,7 +160,7 @@ export const KavakContent = (props: MyData) => {
 
                 <div className="card_inner_form">
                     <ul className="font-bold text-title">
-                    <li>Clave: <span>{props.campo21}</span></li>
+                    <li>Clave: <span>{(props.vinescannerclave) ? props.vinescannerclave: 'Sin datos'}</span></li>
                     </ul>
                 </div>
                 </div>
@@ -166,7 +168,7 @@ export const KavakContent = (props: MyData) => {
                 <div className="card_form">
                 <div className="card_header_form">
                     <i className="bi bi-check-circle fa-2x text-lightblue"></i>
-                    <h2 className="card_title_form"> Coincidencia entre los 4 documentos Vin: <span>{props.campo22}</span> </h2>
+                    <h2 className="card_title_form"> Coincidencia entre los 4 documentos Vin: <span>{(props.coicniden4docs) ? props.coicniden4docs: 'Sin datos'}</span> </h2>
                 </div>
                 </div>
 
@@ -179,7 +181,7 @@ export const KavakContent = (props: MyData) => {
 
                 <div className="card_inner_form">
                     <ul className="font-bold text-title">
-                    <li>Clave: <span>{props.campo23}</span></li>
+                    <li>Clave: <span>{(props.kmtacometroclave) ? props.kmtacometroclave: 'Sin datos'}</span></li>
                     </ul>
                 </div>
                 </div>
@@ -192,7 +194,7 @@ export const KavakContent = (props: MyData) => {
 
                 <div className="card_inner_form">
                     <ul className="font-bold text-title">
-                    <li>Clave: <span>{props.campo24}</span></li>
+                    <li>Clave: <span>{(props.kmescannerclave) ? props.kmescannerclave: 'Sin datos'}</span></li>
                     </ul>
                 </div>
                 </div>
@@ -200,7 +202,7 @@ export const KavakContent = (props: MyData) => {
                 <div className="card_form">
                 <div className="card_header_form">
                     <i className="bi bi-check-circle fa-2x text-lightblue"></i>
-                    <h2 className="card_title_form"> Coincidencia entre los 2 documentos: <span>{props.campo25}</span> </h2>
+                    <h2 className="card_title_form"> Coincidencia entre los 2 documentos: <span>{(props.coiciden2docs) ? props.coiciden2docs: 'Sin datos'}</span> </h2>
                 </div>
 
             
@@ -216,7 +218,7 @@ export const KavakContent = (props: MyData) => {
                     <div className="card_form">
                         <div className="card_header_form">
                         <i className="bi bi-check-circle fa-2x text-lightblue"></i>
-                        <h2 className="card_title_form"><a href={pdf} target="_blank">Validación portal repuve: <span>{props.campo26}</span></a>  </h2>
+                        <h2 className="card_title_form"><a href={pdf} target="_blank">Validación portal repuve: <span>{(props.validacionrepuve) ? props.validacionrepuve: 'Sin datos'}</span></a>  </h2>
                         
                         </div>
                     </div>
@@ -231,11 +233,11 @@ export const KavakContent = (props: MyData) => {
 
                     <div className="card_inner_form">
                         <ul className="font-bold text-title">
-                        <li>VIN: <span>{props.campo27}</span></li>
-                        <li>Año: <span>{props.campo28}</span></li>
-                        <li>Marca: <span>{props.campo29}</span></li>
-                        <li>Modelo: <span>{props.campo30}</span></li>
-                        <li>Procedencia: <span>{props.campo31}</span></li>
+                            <li>VIN: <span>{(props.repuvevin) ? props.repuvevin: 'Sin datos'}</span></li>
+                            <li>Año: <span>{(props.repuveanio) ? props.repuveanio: 'Sin datos'}</span></li>
+                            <li>Marca: <span>{(props.repuvemarca) ? props.repuvemarca: 'Sin datos'}</span></li>
+                            <li>Modelo: <span>{(props.repuvemodelo) ? props.repuvemodelo: 'Sin datos'}</span></li>
+                            <li>Procedencia: <span>{(props.repuveprocedencia) ? props.repuveprocedencia: 'Sin datos'}</span></li>
 
                         </ul>
                     </div>
@@ -252,11 +254,11 @@ export const KavakContent = (props: MyData) => {
 
                     <div className="card_inner_form">
                         <ul className="font-bold text-title">
-                        <li>VIN: <span>{props.campo32}</span></li>
-                        <li>Año: <span>{props.campo33}</span></li>
-                        <li>Marca: <span>{props.campo34}</span></li>
-                        <li>Modelo: <span>{props.campo35}</span></li>
-                        <li>Procedencia: <span>{props.campo36}</span></li>
+                        <li>VIN: <span>{(props.documentosvin) ? props.documentosvin: 'Sin datos'}</span></li>
+                        <li>Año: <span>{(props.documentosanio) ? props.documentosanio: 'Sin datos'}</span></li>
+                        <li>Marca: <span>{(props.documentosmarca) ? props.documentosmarca: 'Sin datos'}</span></li>
+                        <li>Modelo: <span>{(props.documenrosmodelo) ? props.documenrosmodelo: 'Sin datos'}</span></li>
+                        <li>Procedencia: <span>{(props.documentosprocedencia) ? props.documentosprocedencia: 'Sin datos'}</span></li>
 
                         </ul>
                     </div>
@@ -274,10 +276,10 @@ export const KavakContent = (props: MyData) => {
 
                 <div className="card_inner_form">
                 <ul className="font-bold text-title">
-                    <li> <a href={pdf} target="_blank">Validación portal FGJ: <span>{props.campo37}</span></a> </li>
-                    <li> <a href={pdf} target="_blank">Validación portal OCRA: <span>{props.campo38}</span></a> </li>
-                    <li> <a href={pdf} target="_blank">Validación portal Robo USA/CAN: <span>{props.campo39}</span></a> </li>
-                    <li> <a href={pdf} target="_blank">Validación Avisos judiciales: <span>{props.campo40}</span></a> </li>
+                    <li> <a href={pdf} target="_blank">Validación portal FGJ: <span>{(props.FGJ) ? props.FGJ: 'Sin datos'}</span></a> </li>
+                    <li> <a href={pdf} target="_blank">Validación portal OCRA: <span>{(props.OCRA) ? props.OCRA: 'Sin datos'}</span></a> </li>
+                    <li> <a href={pdf} target="_blank">Validación portal Robo USA/CAN: <span>{(props.USA7CAN) ? props.USA7CAN: 'Sin datos'}</span></a> </li>
+                    <li> <a href={pdf} target="_blank">Validación Avisos judiciales: <span>{(props.AVISOSJUDICALES) ? props.AVISOSJUDICALES: 'Sin datos'}</span></a> </li>
 
                 </ul>
                 </div>
@@ -294,7 +296,7 @@ export const KavakContent = (props: MyData) => {
             <div className="card_form">
                 <div className="card_header_form">
                 <i className="bi bi-check-circle fa-2x text-lightblue"></i>
-                <h2 className="card_title_form"> Validación portal RAPI: <span>{props.campo41}</span> </h2>
+                <h2 className="card_title_form"> Validación portal RAPI: <span>{props.VALIDACIONRAPI}</span> </h2>
                 </div>
             </div>
             </div>
@@ -308,8 +310,8 @@ export const KavakContent = (props: MyData) => {
 
                 <div className="card_inner_form">
                 <ul className="font-bold text-title">
-                    <li>VIN: <span>{props.campo42}</span></li>
-                    <li>MOTOR: <span>{}</span></li>
+                    <li>VIN: <span>{(props.RAPIVIN) ? props.RAPIVIN: 'Sin datos'}</span></li>
+                    <li>MOTOR: <span>{(props.tcmotor) ? props.tcmotor: 'Sin datos'}</span></li>
                 </ul>
                 </div>
             </div>
@@ -325,7 +327,7 @@ export const KavakContent = (props: MyData) => {
 
                 <div className="card_inner_form">
                 <ul className="font-bold text-title">
-                    <li>VIN: <span>{props.campo43}</span></li>
+                    <li>VIN: <span>{}</span></li>
                 </ul>
                 </div>
             </div>
@@ -342,7 +344,7 @@ export const KavakContent = (props: MyData) => {
             <div className="card_form">
                 <div className="card_header_form">
                 <i className="bi bi-check-circle fa-2x text-lightblue"></i>
-                <h2 className="card_title_form"> Validación portal AMI Reporte de robo: <span>{props.campo44}</span></h2>
+                <h2 className="card_title_form"> Validación portal AMI Reporte de robo: <span>{(props.VALIDACIONAMIREPORTEROBO) ? props.VALIDACIONAMIREPORTEROBO: 'Sin datos'}</span></h2>
                 </div>
             </div>
             </div>
@@ -360,7 +362,7 @@ export const KavakContent = (props: MyData) => {
             <div className="card_form">
                 <div className="card_header_form">
                 <i className="bi bi-check-circle fa-2x text-lightblue"></i>
-                <h2 className="card_title_form"> Validación portal AMI Seguros: <span>{props.campo45}</span> </h2>
+                <h2 className="card_title_form"> Validación portal AMI Seguros: <span>{(props.VALIDACIONamiSEGUROS) ? props.VALIDACIONamiSEGUROS: 'Sin datos'}</span> </h2>
                 </div>
             </div>
             </div>
@@ -374,9 +376,9 @@ export const KavakContent = (props: MyData) => {
 
                 <div className="card_inner_form">
                 <ul className="font-bold text-title">
-                    <li>Vigencia: <span>{props.campo46}</span></li>
-                    <li>Póliza: <span>{props.campo47}</span></li>
-                    <li>Marca: <span>{props.campo48}</span></li>
+                    <li>Vigencia: <span>{(props.AMIVIGENCIA) ? props.AMIVIGENCIA: 'Sin datos'}</span></li>
+                    <li>Póliza: <span>{(props.AMIPOLIZA) ? props.AMIPOLIZA: 'Sin datos'}</span></li>
+                    <li>Marca: <span>{(props.AMIMARCA) ? props.AMIMARCA: 'Sin datos'}</span></li>
                 </ul>
                 </div>
             </div>
@@ -387,13 +389,13 @@ export const KavakContent = (props: MyData) => {
             <div className="card_form">
                 <div className="card_header_form">
                 <i className="bi bi-bookmark-check fa-2x text-lightblue"></i>
-                <h2 className="card_title_form"> Adeudos: <span>{props.campo49}</span> </h2>
+                <h2 className="card_title_form"> Adeudos: <span>{(props.ADEUDOS) ? props.ADEUDOS: 'Sin datos'}</span> </h2>
                 </div>
 
                 <div className="card_inner_form">
                 <ul className="font-bold text-title">
-                    <li>Edomex: <span>{props.campo50}</span></li>
-                    <li>CDMX: <span>{props.campo51}</span></li>
+                    <li>Edomex: <span>{(props.ADEUDOEDOMEX) ? props.ADEUDOEDOMEX: 'Sin datos'}</span></li>
+                    <li>CDMX: <span>{(props.ADEUDOCDMX) ? props.ADEUDOCDMX: 'Sin datos'}</span></li>
 
                 </ul>
                 </div>

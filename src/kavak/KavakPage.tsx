@@ -3,75 +3,76 @@ import logo from '../assets/Kavak.svg'
 import { KavakContent } from './components/KavakContent'
 import { ChangeEvent, useEffect, useState } from 'react'
 import controlApi from '../api/config'
-import { alerts } from '../config/alerts.adapter'
 import LoadingCircle from '../ui/loading/LoadingCircle'
 import { MyData, MyDataResponse } from './interfaces/interfaces'
 
-const initialState = {
-        campo1: '',
-        campo2: '',
-        campo3: '',
-        campo4: '',
-        campo5: '',
-        campo6: '',
-        campo7: '',
-        campo8: '',
-        campo9: '',
-        campo10: '',
-        campo11: '',
-        campo12: '',
-        campo13: '',
-        campo14: '',
-        campo15: '',
-        campo16: '',
-        campo17: '',
-        campo18: '',
-        campo19: '',
-        campo20: '',
-        campo21: '',
-        campo22: '',
-        campo23: '',
-        campo24: '',
-        campo25: '',
-        campo26: '',
-        campo27: '',
-        campo28: '',
-        campo29: '',
-        campo30: '',
-        campo31: '',
-        campo32: '',
-        campo33: '',
-        campo34: '',
-        campo35: '',
-        campo36: '',
-        campo37: '',
-        campo38: '',
-        campo39: '',
-        campo40: '',
-        campo41: '',
-        campo42: '',
-        campo43: '',
-        campo44: '',
-        campo45: '',
-        campo46: '',
-        campo47: '',
-        campo48: '',
-        campo49: '',
-        campo50: '',
-        campo51: '',
- 
-}
 
-interface UploadResponse {
-  data: {
-      message: string;
-      data: {
-        dataSaved: { fileName: string }[];
-        missingData: string[];
-      };
+// interface UploadResponse {
+//   data: {
+//       message: string;
+//       data: {
+//         dataSaved: { fileName: string }[];
+//         missingData: string[];
+//       };
 
-  }
-}
+//   }
+// }
+export const initialState: MyData = {
+  idkavakpoc: '',
+  tvplaca: null,
+  tvmes: null,
+  tvestado: null,
+  tcplaca: null,
+  tcvin: null,
+  tcmodelo: null,
+  tcestado: null,
+  cftipo: null,
+  cfplaca: null,
+  cdmodelo: null,
+  cfanio: null,
+  cfvalidez: null,
+  cfcodigo: null,
+  paclave: null,
+  peclave: null,
+  c5docs: null,
+  reclave: null,
+  vinparabclave: null,
+  vincarclave: null,
+  vinmotorclave: null,
+  vinescannerclave: null,
+  coicniden4docs: null,
+  kmtacometroclave: null,
+  kmescannerclave: null,
+  coiciden2docs: null,
+  validacionrepuve: null,
+  repuvevin: null,
+  repuveanio: null,
+  repuvemarca: null,
+  repuvemodelo: null,
+  repuveprocedencia: null,
+  documentosvin: null,
+  documentosanio: null,
+  documentosmarca: null,
+  documenrosmodelo: null,
+  documentosprocedencia: null,
+  FGJ: null,
+  OCRA: null,
+  USA7CAN: null,
+  AVISOSJUDICALES: null,
+  VALIDACIONRAPI: null,
+  RAPIVIN: null,
+  VALIDACIONAMIREPORTEROBO: null,
+  VALIDACIONamiSEGUROS: null,
+  AMIVIGENCIA: null,
+  AMIPOLIZA: null,
+  AMIMARCA: null,
+  ADEUDOS: null,
+  ADEUDOEDOMEX: null,
+  ADEUDOCDMX: null,
+  tcfechavigencia: null,
+  tcedovigente: null,
+  tcmotor: null,
+};
 
 
 
@@ -81,9 +82,11 @@ export interface DataCampos {
 export const KavakPage = () => {
 
   const [isSaved, setIsSaved ] = useState<boolean>(false);
-  const [missingFiles, setMissingFiles ] = useState<string[]>([]);
+  // const [missingFiles, setMissingFiles ] = useState<string[]>([]);
   const [showLoading, setShowLoading] = useState(true);
   const [dataCampos, setDataCampos] = useState<MyData>(initialState);
+  const [primerPeticionResuelta, setPrimerPeticionResuelta] = useState(false);
+
 
   const handleFiles = async (event: ChangeEvent<HTMLInputElement>) => {
     event.preventDefault()
@@ -94,38 +97,53 @@ export const KavakPage = () => {
       formData.append('file', files[i]);
     }
 
-    const response = await controlApi.post('/upload/multiple', formData) as UploadResponse;
+    try {
+      const response = await controlApi.post('/upload/multiple', formData);
 
-    if(response.data.data.missingData.length != 0){
-
-      alerts.alertWarning('Faltan Archivos', 'Cargue los documentos faltantes porfavor');
-      setMissingFiles( response.data.data.missingData )
-      setIsSaved(false)
-      setDataCampos(initialState);
-    }else{
-      setIsSaved(true)
-      const response = await controlApi.get<MyDataResponse>('/documents/2');
-      const campos = response.data.data as MyData;
-      setDataCampos(campos);
+      if (response.status === 200) {
+        setIsSaved(true);
+        setPrimerPeticionResuelta(true)
+      }
+    } catch (error) {
+      console.error('Error al realizar la carga de archivos:', error);
     }
-      
+    //   console.log(data)
+
   } 
 
   
     useEffect(() => {
-      const delay = 25000; // 15 segundos
-
-      if (isSaved) {
-        const timer = setTimeout(() => {
-          // Ocultar la ventana de carga después del retraso
-          setShowLoading(false);
-        }, delay);
-
-        return () => {
-          clearTimeout(timer);
-        };
+      if (!primerPeticionResuelta) {
+        return;
       }
-    }, [isSaved]);
+      const tiempoLimiteMs = 3 * 60 * 1000;
+      const tiempoInicio = Date.now();
+      const realizarPeticion = async () => {
+        while (Date.now() - tiempoInicio < tiempoLimiteMs) {
+          try {
+            // Intentar obtener datos
+            const data = await controlApi.get<MyDataResponse>('/documents/708085ea-e66a-481a-b063-a4e6c6cb3258');
+
+            if (data.data.message === 'Success') {
+              setDataCampos(data.data.data)
+              setIsSaved(true);
+              break;
+            }
+          } catch (error) {
+            console.error('Error al realizar la petición:', error);
+          }
+
+          await esperar(5000);
+        }
+
+        setShowLoading(false);
+      };
+
+      realizarPeticion();
+    }, [isSaved, primerPeticionResuelta]);
+
+    const esperar = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+
 
 
   return (
@@ -160,37 +178,6 @@ export const KavakPage = () => {
             </div>
           </div>
       </div>
-
-      {
-        (!isSaved && missingFiles.length != 0) && (
-
-          <div className="main_header">
-  
-            <div className="main__cards">
-              <div className="card">
-               
-                <div className="file-input-container">
-                  <p>Lista de Archivos faltantes</p>
-
-                  <div className="card_form " style={{alignItems: '', justifyContent:'start'}}>
-                
-                    <div className="card_inner_form">
-                        <ul className="font-bold text-title">
-                        {
-                          missingFiles.map((file, index) => (
-                            <li key={index}>- {file}</li>
-                          ))
-                        }
-                        </ul>
-                    </div>
-                  </div>
-              
-              </div>
-              </div>
-            </div>
-        </div>
-        )
-      }
 
       {(showLoading && isSaved) ? (
         <>
